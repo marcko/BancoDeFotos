@@ -1,0 +1,46 @@
+<%- partial('partials/header.ejs') %>
+  <div class="container">
+    
+     <% _.each(result, function(results){%>
+    <div class="row">
+        
+
+
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        
+         <img class="image-responsive"src=<%=results.uri%> alt="">  
+
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        
+        <label for="">Nombre:</label>   <%- results.title%> <br>
+        <label for="">Autor:</label>    <%- results.author%> <br>
+        <label for="">Categoría:</label>    <%- results.category%> <br>
+         <label for="">ID:</label>   <%- results.id%> <br>
+         <label for="">Descripción:</label>   <%- results.description%> <br>
+        <label for="">Precio:</label>   <%- results.price%> <br>
+
+    </div>
+          
+        
+    </div>
+       
+                
+           <%if(req.user){%>
+                    <%if(req.user.id==="54b44047afca040e005b701f"){%>
+
+                        <a class="btn btn-fab btn-raised btn-success" href=/images/<%- results.id%>><i class="mdi-image-edit"> </i>
+                          
+                        </a>
+                   
+                    <%}%>
+  
+        
+        <%}%>  
+
+    <%});%>
+    
+       
+  </div>
+
+

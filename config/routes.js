@@ -44,7 +44,16 @@ module.exports.routes = {
   '/logout' : {
     controller : 'auth',
     action     : 'logout'
-  }
+  },
+  'post /Upload/Img':'file.upload',
+  'post /s3Upload/Img':'file.s3upload',
+  'post /images':'img.search',
+  'get /images/:id':'img.searchID',
+  'get /updateid':{view:'updateid'},
+  'post /updateid/updateid':'img.update',
+
+  'post /images/delete':'img.delete',
+  'get /images2':'img.search2',
 
   /***************************************************************************
   *                                                                          *

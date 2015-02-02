@@ -28,10 +28,20 @@ module.exports.policies = {
 
   '*': 'sessionAuth',
 
-  'auth': {
+  'home': {
     '*': true
-  }
+  },
+  'ImgController': {
+    searchID:['sessionAuth'],
+    search:true
 
+  },
+  'FileController':{
+    upload:['sessionAuth'],
+  },
+  'auth':{
+    '*':true
+  }
   /***************************************************************************
   *                                                                          *
   * Here's an example of mapping some policies to run before a controller    *

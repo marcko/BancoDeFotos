@@ -1,0 +1,21 @@
+a{
+text-decoration: none;
+}
+.jumboindex{
+
+  margin-top: -20px;
+  height: 400px;
+}
+.jumboindexgallery{
+    
+    margin-top: -250px;
+    height: 400px;
+    border-radius: 10px;
+
+}
+.fa-spin{
+  margin-right: 10px;
+}
+.navbar-right{
+  font-size: 20px;
+}

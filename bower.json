@@ -1,0 +1,9 @@
+{
+	"name":"BancoDeFotos",
+	"version":"0.0.0",
+	"dependencies":{
+		"jquery":"*",
+		"jqueryui":"*",
+		"bootstrap":"*"
+	}
+}

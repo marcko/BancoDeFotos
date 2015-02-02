@@ -1,0 +1,28 @@
+web:
+  image: luis/sails
+  volumes:
+    - ./:/var/www
+    - /var/log/docker/project/:/var/log/supervisor
+    - ./data:/var/www/data
+  ports:
+    - "1337:1337"
+    - "80:80"
+  links:
+    - "mongodb:mongodb"
+    - "redis:redis"
+  environment:
+    NODE_ENV:  development
+    port: 3000
+mongodb:
+  image: luis/mongodb
+  volumes_from:
+    - STOCK_DATA
+  expose:
+    - "27017"
+  environment:
+    DB: stock
+redis:
+  image: redis 
+  expose:
+    - "6379"
+

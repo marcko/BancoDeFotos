@@ -1,0 +1,12 @@
+<% _.each(result,function(update){%>
+<img src=<%=update.uri%> alt="">
+<form action="/updateid/updateid" method="post" enctype="multipart/form-data">
+         title:<input type="text" name="title" value=<%-update.title%> ><br>
+         author:<input type="text" name="author" value=<%-update.author%> ><br>
+         price:<input type="text" name="price" value=<%-update.price%> ><br>
+         description:<input name="description" id="" cols="30" rows="10"  value=<%-update.description%> >  <br>
+         category:<input type="text" name="category" value=<%-update.category%>><br>
+
+         <input type="submit" value="actualizar" >
+</form>
+<%});%>

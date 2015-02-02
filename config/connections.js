@@ -58,11 +58,13 @@ module.exports.connections = {
   ***************************************************************************/
   mongo: {
     adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    user: '',
-    password: '',
-    database: 'sails-social-auth'
+    //url:"mongodb://marco:root@proximus.modulusmongo.net:27017/asop2yNo",
+    host: process.env.MONGODB_PORT_27017_TCP_ADDR,
+    port: process.env.MONGODB_PORT_27017_TCP_PORT ? process.env.MONGODB_PORT_27017_TCP_PORT : 27017,
+    // user: process.env.MONGOHQ_USER,
+    // password: process.env.MONGOHQ_PASSWORD,
+    database: process.env.MONGODB_ENV_DB,
+    schema: true
   },
 
   /***************************************************************************

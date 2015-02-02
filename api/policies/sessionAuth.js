@@ -9,13 +9,16 @@
  */
 module.exports = function(req, res, next) {
 
+  var actionUtil = require('../../node_modules/sails/lib/hooks/blueprints/actionUtil');
+  var values = actionUtil.parseValues(req);
   // User is allowed, proceed to the next policy,
   // or if this is the last policy, the controller
-  if (req.isAuthenticated()) {
+if (req.isAuthenticated()) {
+   console.log(values);
     return next();
-  }
+ }
 
   // User is not allowed
   // (default res.forbidden() behavior can be overridden in `config/403.js`)
-  return res.redirect('/login');
+return res.redirect('/');
 };

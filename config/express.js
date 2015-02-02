@@ -70,9 +70,9 @@ module.exports.http = {
     }, verifyHandler));
 
     passport.use(new GoogleStrategy({
-      clientID: 'YOUR_CLIENT_ID',
-      clientSecret: 'YOUR_CLIENT_SECRET',
-      callbackURL: 'http://localhost:1337/auth/google/callback'
+      clientID: '392462569933-20ipfirdvsj9j4s4flojr2mdkapr94f2.apps.googleusercontent.com',
+      clientSecret: 'rHprlsbdY2s_syywL8CZUyVq',
+      callbackURL: 'http://localhost/auth/google/callback'
     }, verifyHandler));
 
     passport.use(new TwitterStrategy({

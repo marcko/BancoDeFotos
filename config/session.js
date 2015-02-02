@@ -41,7 +41,7 @@ module.exports.session = {
   * session store that can be shared across multiple Sails.js servers        *
   ***************************************************************************/
 
-  // adapter: 'redis',
+  adapter: 'redis',
 
   /***************************************************************************
   *                                                                          *
@@ -52,12 +52,12 @@ module.exports.session = {
   *                                                                          *
   ***************************************************************************/
 
-  // host: 'localhost',
-  // port: 6379,
+  host: process.env.REDIS_PORT_6379_TCP_ADDR,
+  port: process.env.REDIS_PORT_6379_TCP_PORT,
   // ttl: <redis session TTL in seconds>,
-  // db: 0,
+  db: 0,
   // pass: <redis auth password>
-  // prefix: 'sess:'
+  prefix: 'sess:'
 
 
   /***************************************************************************
@@ -66,12 +66,12 @@ module.exports.session = {
   * store                                                                    *
   *                                                                          *
   ***************************************************************************/
-
+/*
   adapter: 'mongo',
-  host: 'localhost',
+  host: process.env.MONGODB_PORT_27017_TCP_ADDR,
   port: 27017,
-  db: 'sails-social-auth',
-  collection: 'sessions',
+  db: process.env.MONGODB_ENV_DB,
+  collection: 'sessions',*/
 
   /***************************************************************************
   *                                                                          *
