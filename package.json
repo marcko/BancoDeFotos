@@ -1,5 +1,5 @@
 {
-  "name": "sails-social-auth-example",
+  "name": "BancoDeFotos",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -38,8 +38,8 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/stefanbuck/sails-social-auth-example.git"
+    "url": "git://github.com/marcko/BancoDeFotos"
   },
-  "author": "stefanbuck",
+  "author": "marcko",
   "license": "MIT"
 }
